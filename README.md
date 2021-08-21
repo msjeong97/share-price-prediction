@@ -3,8 +3,19 @@
 
 ## 1. Environment setup
 
+### 1.1 install python and packages
 ```bash
 $ pyenv install 3.8.5
 $ pip install -r requirements.txt
 ```
+
+### 1.2 solve numpy runtime error
+```bash
+RuntimeError: Polyfit sanity test emitted a warning, most likely due to using a buggy Accelerate backend. If you compiled yourself, see site.cfg.example for information. Otherwise report this to the vendor that provided NumPy.
+RankWarning: Polyfit may be poorly conditioned
+
+$ pip unintsall numpy
+$ brew install openblas
+$ OPENBLAS="$(brew --prefix openblas)" pip install numpy
+``` 
 
